@@ -27,7 +27,7 @@ namespace AspNetIdentity.Controllers
         {
             var currentUser = User.Identity.GetUserId();
             var tools = _repo.List(x => x.UserId == currentUser, x => x.User);
-            return View(tools.ToList());
+            return View(tools);
         }
 
         // GET: Tools/Details/5
